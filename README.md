@@ -23,3 +23,13 @@ dvc add data_given/winequality.csv
 git add .
 
 git commit -m "first commit"
+oneliner updates for readme
+
+
+git add . && git commit -m "update Readme.md"
+
+git branch -M main 
+
+git remote add origin https://github.com/kailas-muke/simple-dvc.git
+
+git push origin main
