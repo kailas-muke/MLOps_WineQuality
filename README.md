@@ -116,6 +116,8 @@ Add code in setup file.
 
 Let's install the package created in setup.py pip install -e .
 
+(optional:- "python setup.py sdist bdist_wheel" it will create dist so it will share with others to install same library)
+
 Use of doing this is src will be treated as package here and you will be able to import it
 
 You can use pytest to run the testcases and tox to run complete environment related task including testcases.
