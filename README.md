@@ -97,7 +97,8 @@ You can rollback to any previous stage using git checkout and the commit id.
 Now that we have basic code implementation done. Lets look into over the testing part.
 
 Install tox and pytest library
-What is tox tox is mainly used as a command line tool and needs a tox.ini or a tool.tox section in pyproject.toml containing the configuration. tox can be used for ... creating development environments running static code analysis and test tools automating package builds running tests against the package built by tox checking that packages install correctly with different Python versions/interpreters unifying Continuous Integration and command line based testing building and deploying project documentation releasing a package to PyPI or any other platform
+
+What is tox:- tox is mainly used as a command line tool and needs a tox.ini or a tool.tox section in pyproject.toml containing the configuration. tox can be used for ... creating development environments running static code analysis and test tools automating package builds running tests against the package built by tox checking that packages install correctly with different Python versions/interpreters unifying Continuous Integration and command line based testing building and deploying project documentation releasing a package to PyPI or any other platform
 
 Let's create tox.ini file now in the root directory
 
