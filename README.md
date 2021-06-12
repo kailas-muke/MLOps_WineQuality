@@ -34,11 +34,11 @@ Do git branch -M main
 
 Do git push -u origin main
 
-Lets beign for actual code
+Lets begin for actual code
 
 Update the params.yaml file with the configuration paths and values
 
-Commit your changes using git add . git commit -m "Updated params.yaml" git push -u origin main
+Commit your changes using git add . && git commit -m "Updated params.yaml" git push -u origin main
 
 Create a new file under src folder get_data.py which will contain code to get the data fsutil file createnew src\get_data.py 0
 
@@ -46,7 +46,7 @@ Write the code to get data
 
 Create load_data.py file in src where we will be adding data in raw folder fsutil file createnew src\load_data.py 0
 
-24, Run the file and check that raw folder should be updated with winequality.csv file
+Run the file and check that raw folder should be updated with winequality.csv file
 
 Now add stages in the dvc.yaml file. Stages are nothing but it is a pipeline We have given the first stage name as load_data
 
@@ -76,7 +76,7 @@ Create a file params.json file and scores.json fsutil file createnew report/para
 
 We need not worry about what is to be added it will automatically be updated by the dvc pipelines.
 
-38 Do dvc repo
+Do dvc repo
 
 All the metrics related scores and params are updated after running above command.
 
@@ -123,4 +123,4 @@ We will not just check basic validations and put the validation check in test_co
 
 Update your tox file to include PEP8 standard.
 
-Psh your changes.
+Push your changes.
