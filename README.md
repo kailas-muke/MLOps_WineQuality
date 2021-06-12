@@ -114,7 +114,7 @@ Now create setup.py file which will help virtual env created by tox to identify 
 
 Add code in setup file.
 
-Let's install the package created in setup.py pip install -e .
+Let's install the package created in setup.py pip install -e .(for local package install)
 
 (optional:- "python setup.py sdist bdist_wheel" it will create dist so it will share with others to install same library)
 
