@@ -18,7 +18,7 @@ def load_and_save(config_path):
 
     # While running through dvc repo command use this line
     raw_data_path = config["load_data"]["raw_dataset_csv"]
-    df.to_csv(raw_data_path, sep=',', index=False, header=new_cols)
+    df.to_csv(raw_data_path, sep=',', index=False, header=new_cols)  # save the data in csv file
 
 
 if __name__ == "__main__":
