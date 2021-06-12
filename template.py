@@ -3,8 +3,8 @@ import os
 dirs = [
     os.path.join("data", "raw"),       # os.path.join is used to give path to folder in any os
     os.path.join("data", "processed"),
-    "notebooks",
-    "saved_models",
+    "notebooks",                        # experimenting using jupyter notebook
+    "saved_models",                     # all the saved ML models
     "src"
 ]
 for dir_ in dirs:
