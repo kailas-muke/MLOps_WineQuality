@@ -39,8 +39,8 @@ def train_and_evaluate(config_path):
     train_data_path = config["split_data"]["train_path"]
     test_data_path = config["split_data"]["test_path"]
     model_dir = config["model_dir"]
-    # params_json_path = config["report"]["params"]
-    # scores_json_path = config["report"]["scores"]
+    params_json_path = config["reports"]["params"]
+    scores_json_path = config["reports"]["scores"]
 
     test_ratio = config["split_data"]["test_size"]
     random_state = config["base"]["random_state"]
@@ -73,20 +73,20 @@ def train_and_evaluate(config_path):
     print("MAE %s" % mae)
     print("R2 %s" % r2)
 
-    # with open(scores_json_path, 'w') as f:
-    #     scores = {
-    #         "rmse": rmse,
-    #         "mae": mae,
-    #         "r2": r2
-    #     }
-    #     json.dump(scores, f, indent=4)
-    #
-    # with open(params_json_path, 'w') as f:
-    #     params = {
-    #         "alpha": alpha,
-    #         "l1_ratio": l1_ratio,
-    #     }
-    #     json.dump(params, f, indent=4)
+    with open(scores_json_path, 'w') as f:
+        scores = {
+            "rmse": rmse,
+            "mae": mae,
+            "r2": r2
+        }
+        json.dump(scores, f, indent=4)
+
+    with open(params_json_path, 'w') as f:
+        params = {
+            "alpha": alpha,
+            "l1_ratio": l1_ratio,
+        }
+        json.dump(params, f, indent=4)
 
     os.makedirs(model_dir, exist_ok=True)
     model_path = os.path.join(model_dir, "model.joblib")
