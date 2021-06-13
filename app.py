@@ -47,7 +47,7 @@ def index():
         try:
             if request.form:
                 data = dict(request.form).values()
-                print(data)
+                #print(data)
                 data =[list(map(lambda x: x[0], data))]
                 response = predict(data)
                 return render_template("index.html", response=response)
@@ -63,7 +63,7 @@ def index():
         except Exception as e:
             print(e)
             error = {"error": "Something went wrong!! Try again later!"}
-            error = {"error": e}
+            #error = {"error": e}
 
             return render_template("404.html", error=error)
     else:
